@@ -277,7 +277,6 @@ textarea {
     font-weight: 500;
     font-size: 3.2rem;
     line-height: 1.2;
-    text-align: center;
     color: var(--dark-grey);
     text-wrap: balance;
 }
@@ -297,23 +296,146 @@ h4.title {
     font-family: 'FuturaPT Demi';
     font-size: 1.6rem;
 }
-/* 
+
+/* Forms  */
+.cta__form__inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form__item {
+    position: relative;
+}
+
+.form__item::before {
+    position: absolute;
+    content: '';
+    width: 1.8rem;
+    height: 1.8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 1.4rem;
+    left: 1rem;
+}
+
+.form__item_name::before {
+    background-image: url(../../img/base/form-name.svg);
+}
+
+.form__item_tel::before {
+    background-image: url(../../img/base/form-tel.svg);
+}
 
 .form__input {
-    font-family: 'Kinetika';
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.5;
-    color: var(--default-dark-teal);
+    color: var(--default);
     background: var(--white);
-    font-weight: 400;
-    padding: 1.6rem;
-    border: 1px solid var(--grey-teal);
+    padding: 1.4rem 1.4rem 1.4rem 3.8rem;
     width: 100%;
     outline: none;
     margin-bottom: 0;
-    border-radius: var(--border-radius-x2);
+    border-radius: .8rem;
+    font-weight: 500;
+    font-family: 'FuturaPT';
 }
 
 .form__input::placeholder {
-    color: var(--grey-teal);
-} */
+    font-family: 'FuturaPT Book';
+
+}
+
+.cta__form-btn {
+    min-width: 18rem;
+}
+
+.acceptance__text {
+    font-size: 1.2rem;
+    color: rgba(72, 81, 85, 0.5);
+}
+
+.acceptance__text a {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+@media (hover:hover) {
+    .acceptance__text a:hover {
+        color: var(--default);
+    }
+}
+
+@media (hover:none) {
+    .acceptance__text a:active {
+        color: var(--default);
+    }
+}
+
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+.custom-checkbox>span::before {
+    content: '';
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid transparent;
+    border-radius: .4rem;
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70% 70%;
+    transition: all .2s linear;
+    margin-bottom: 0.2rem;
+    background-color: #fff;
+}
+
+@media (max-width: 640px) {
+    .custom-checkbox>span::before {
+        width: 1rem;
+        height: 1rem;
+        margin-right: .4rem;
+    }
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: var(--blue);
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox>input:focus+span::before {
+    border-color: var(--blue);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: var(--blue);
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6741 5.89355L8.01619 15.7883L4.30566 12.0778' stroke='black' stroke-width='1.94595' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+}
