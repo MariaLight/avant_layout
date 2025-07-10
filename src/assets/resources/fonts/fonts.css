@@ -103,3 +103,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('playfairdisplay-semibold.eot');
+    src: local('Playfair Display Semibold'), local('playfairdisplay-semibold'),
+        url('playfairdisplay-semibold.eot?#iefix') format('embedded-opentype'),
+        url('playfairdisplay-semibold.woff2') format('woff2'),
+        url('playfairdisplay-semibold.woff') format('woff'),
+        url('playfairdisplay-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
