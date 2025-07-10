@@ -13,7 +13,7 @@
                     <span class="header__search-icon">
 
                         <svg>
-                            <use href="assets/img/sprite.svg#search"></use>
+                            <use xlink:href="assets/img/sprite.svg#search"></use>
                         </svg>
                     </span>
                 </button>
@@ -21,7 +21,7 @@
                     <form onsubmit="return true;">
                         <span class="header__search-icon">
                             <svg>
-                                <use href="assets/img/sprite.svg#search"></use>
+                                <use xlink:href="assets/img/sprite.svg#search"></use>
                             </svg>
                         </span>
                         <input type="text" class="header__search-input input-reset" placeholder="Введите что нибудь...">
@@ -47,6 +47,20 @@
 
                 </div>
             </div>
+
+            <button class="header__callback btn-reset" data-modal="callback">
+                <svg>
+                    <use xlink:href="assets/img/sprite.svg#phone"></use>
+                </svg>
+                <span>Заказать звонок</span>
+            </button>
+
+            <div class="header__phone">
+                <a href="tel:+79850388787" class="header__phone__link">
+                    <span>+7 (985)</span> 038-87-87
+                </a>
+                <span class="header__phone__descriptor">Ежежневно: 09:00 - 19:00</span>
+            </div>
         </div>
     </div>
     <div class="header__bottom">
@@ -61,7 +75,13 @@
                     <li class="header__menu__item">
                         <a href="#" class="header__menu__link">
                             Услуги
+                            <svg>
+                                <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                            </svg>
                         </a>
+                        <div class="header__menu__dropdown">
+
+                        </div>
                     </li>
                     <li class="header__menu__item">
                         <a href="#" class="header__menu__link">
