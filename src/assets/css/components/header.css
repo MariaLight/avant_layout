@@ -1,0 +1,142 @@
+.header__top {
+    padding: 1.2rem 0 1.6rem;
+}
+
+.header__top__inner {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 14rem;
+    height: 5rem;
+    margin-right: 5rem;
+}
+
+.header__descriptor {
+    max-width: 29rem;
+    padding-left: 3rem;
+    border-left: 1px solid rgba(72, 81, 85, 0.15);
+    font-size: 1.8rem;
+    margin-right: 3rem;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__search-btn {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--default);
+}
+
+@media (hover:hover) {
+    .header__search-btn:hover {
+        color: var(--blue);
+    }
+}
+
+@media (hover:none) {
+    .header__search-btn:active {
+        color: var(--blue);
+    }
+}
+
+.header__search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__search-icon svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.header__search-form {
+    display: none;
+    transition: all .2s;
+    opacity: 0;
+    pointer-events: none;
+    /* padding: 1rem 1.2rem; */
+    transition: all .2s linear;
+}
+
+.header__search-form.active {
+    display: flex;
+}
+
+.header__search-form .header__search-icon {
+    margin-right: 1rem;margin-left: 1.2rem;
+}
+
+.header__search-form form {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.header__search-input {
+    font-size: 1.4rem;
+    padding: 1rem 1.2rem 1rem 0;
+    outline: none;
+    color: var(--default);
+}
+
+.header__search {
+    border-radius: 5rem;
+    border: 1px solid var(--white);
+
+    background-color: var(--white);
+}
+
+.header__search-submit {
+    border-radius: 2rem;
+    padding: .5rem 1.5rem;
+}
+
+.header__bottom {
+    background-color: var(--grey);
+    padding: 1.2rem 0;
+}
+
+.header__menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.header__menu__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.header__menu__link {
+    font-size: 2rem;
+    color: var(--default);
+    text-transform: uppercase;
+
+}
+
+@media (hover:hover) {
+    .header__menu__link:hover {
+        color: var(--blue);
+    }
+}
+
+@media (hover:none) {
+    .header__menu__link:active {
+        color: var(--blue);
+    }
+}

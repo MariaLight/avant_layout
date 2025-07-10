@@ -1,3 +1,81 @@
 <header class="header">
-    
+    <div class="header__top">
+        <div class="header__top__inner container">
+            <div class="header__logo">
+                <img src="assets/img/base/logo.svg" alt="Авант Опалубка">
+            </div>
+            <div class="header__descriptor">
+                Производство, аренда и продажа опалубки с доставкой по России
+            </div>
+            <form action="#" class="header__search">
+                <button type="button" class="header__search-btn btn-reset" aria-label="Открыть поиск"
+                    onclick="this.nextElementSibling.classList.add('active'); this.style.display='none';">
+                    <span class="header__search-icon">
+
+                        <svg>
+                            <use href="assets/img/sprite.svg#search"></use>
+                        </svg>
+                    </span>
+                </button>
+                <div class="header__search-form">
+                    <form onsubmit="return true;">
+                        <span class="header__search-icon">
+                            <svg>
+                                <use href="assets/img/sprite.svg#search"></use>
+                            </svg>
+                        </span>
+                        <input type="text" class="header__search-input input-reset" placeholder="Введите что нибудь...">
+                        <button type="submit" class="header__search-submit btn-reset main-btn" aria-label="Найти">
+                            Найти
+                        </button>
+                    </form>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="header__bottom__inner container">
+            <nav class="header__menu">
+                <ul class="header__menu__list list-reset">
+                    <li class="header__menu__item">
+                        <a href="#" class="header__menu__link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="header__menu__item">
+                        <a href="#" class="header__menu__link">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="header__menu__item">
+                        <a href="#" class="header__menu__link">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="header__menu__item">
+                        <a href="#" class="header__menu__link">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="header__menu__item">
+                        <a href="#" class="header__menu__link">
+                            Доставка
+                        </a>
+                    </li>
+                    <li class="header__menu__item">
+                        <a href="#" class="header__menu__link">
+                            Отзывы
+                        </a>
+                    </li>
+
+                    <li class="header__menu__item">
+                        <a href="#" class="header__menu__link">
+                            Контакты
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>

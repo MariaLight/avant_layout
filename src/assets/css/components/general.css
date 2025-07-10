@@ -2,7 +2,7 @@
     --bg: #F3F3F3;
     --grey: #EBEBEB;
     --blue: #019ADE;
-    --default: #00323C;
+    --default: #485155;
     --dark-grey: #485155;
     --white: #fff;
     --font-default: 'FuturaPT Book', sans-serif;
@@ -219,7 +219,7 @@ textarea {
 }
 
 .container {
-    width: 139.2rem;
+    width: 116rem;
     max-width: 100%;
     margin: 0 auto;
 }

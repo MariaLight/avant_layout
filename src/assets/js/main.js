@@ -61,7 +61,26 @@ document.addEventListener('DOMContentLoaded', function () {
     } catch (error) {
     }
 
-
+    const searchBtn = document.querySelector('.header__search-btn');
+    const searchFormWrapper = document.querySelector('.header__search-form');
+    if (searchBtn && searchFormWrapper) {
+        searchBtn.onclick = function () {
+            searchFormWrapper.classList.add('active');
+            searchFormWrapper.style.opacity = '1';
+            searchFormWrapper.style.pointerEvents = 'auto';
+            searchBtn.style.display = 'none';
+            searchFormWrapper.querySelector('input').focus();
+        };
+        
+        searchFormWrapper.querySelector('input').addEventListener('blur', function () {
+            setTimeout(function () {
+                searchFormWrapper.classList.remove('active');
+                searchFormWrapper.style.opacity = '0';
+                searchFormWrapper.style.pointerEvents = 'none';
+                searchBtn.style.display = '';
+            }, 200);
+        });
+    }
 
     const burgerBtn = document.querySelector('#burger');
     const burgerMenu = document.querySelector('.header__menu');
