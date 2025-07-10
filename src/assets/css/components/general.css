@@ -1,0 +1,356 @@
+:root {
+    --default-dark-teal: #00323C;
+    --dark-teal-active: #00738A;
+    --black: #00323C;
+    --beige: #E6FACD;
+    --light-beige: #F5FDEB;
+    --dark-beige: #C3DCB9;
+    --light-teal: #00E1A5;
+    --grey-teal: #80989D;
+    --grey-teal-active: #DCE3E4;
+    --yellow: #D2E600;
+    --white: #ffffff;
+    --border-radius-x2: .8rem;
+    --border-radius-x3: 1.2rem;
+    --border-radius-x5: 2rem;
+    --border-radius-x6: 2.4rem;
+    --font-default: 'Kinetika', sans-serif;
+
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page {
+    height: 100%;
+    font-family: var(--font-default);
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+}
+
+
+@media (min-width:320px) {
+    .page {
+        font-size: calc(100vw / 390 * 10);
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width:640px) {
+    .page {
+        overflow-x: visible;
+        font-size: calc(100vw / 1440 * 10);
+    }
+}
+
+.page__body {
+    margin: 0;
+    min-width: 32rem;
+    min-height: 100%;
+    font-size: 1.6rem;
+    background-color: var(--beige);
+    color: var(--default-dark-teal);
+    line-height: normal;
+    font-weight: 400;
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 640px) {
+    .page__body {
+        font-size: 1.4rem;
+        overflow-x: hidden;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto
+}
+
+.footer {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto
+}
+
+.section {
+    padding: 4.8rem 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: block
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a,
+button {
+    -webkit-transition: color .2s, background-color .2s, background .2s, opacity .2s, -webkit-transform .2s;
+    transition: color .2s, background-color .2s, background .2s, opacity .2s, transform .2s, -webkit-transform .2s;
+    -o-transition: color .2s, background-color .2s, background .2s, opacity .2s, transform .2s;
+    cursor: pointer;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    padding: 0;
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+dl,
+dt,
+dd {
+    margin: 0;
+}
+
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.is-hidden {
+    display: none !important
+}
+
+.btn-reset {
+    border: none;
+    padding: 0;
+    background: 0 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all .2s linear;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.input-reset {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: var(--white)
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.input-reset::-webkit-search-cancel-button,
+.input-reset::-webkit-search-decoration,
+.input-reset::-webkit-search-results-button,
+.input-reset::-webkit-search-results-decoration {
+    display: none
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0)
+}
+
+.container {
+    width: 139.2rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+@media (max-width:640px) {
+    .container {
+        width: 36rem;
+    }
+}
+
+.main-btn {
+    /* font-family: var(--font-default); */
+    font-family: 'Kinetika';
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--default-dark-teal);
+    background-color: var(--light-teal);
+    border: .1rem solid var(--light-teal);
+    text-align: center;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: var(--border-radius-x2);
+    position: relative;
+    padding: 1.6rem 2rem;
+
+}
+
+.main-btn_light-teal {
+    color: var(--default-dark-teal);
+    background-color: var(--light-teal);
+    border: .1rem solid var(--light-teal);
+}
+
+.main-btn_yellow {
+    color: var(--default-dark-teal);
+    background-color: var(--yellow);
+    border: .1rem solid var(--yellow);
+}
+
+.main-btn_black {
+    color: var(--white);
+    background-color: var(--default-dark-teal);
+    border: .1rem solid var(--default-dark-teal);
+}
+
+.main-btn_dark-beige {
+    color: var(--default-dark-teal);
+    background-color: var(--dark-beige);
+    border: .1rem solid var(--dark-beige);
+}
+
+.main-btn_small {
+    padding: .8rem 1.6rem;
+}
+
+.main-btn_icon {
+    padding: 1.2rem;
+}
+
+.main-btn_icon svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+@media (hover:hover) {
+    .main-btn:hover {
+        opacity: 0.7;
+    }
+}
+
+@media (hover:none) {
+    .main-btn:active {
+        opacity: 0.7;
+
+    }
+}
+
+
+.title {
+    font-family: var(--font-default);
+    font-weight: 900;
+    font-size: 5.6rem;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--default-dark-teal);
+    text-wrap: balance;
+}
+
+@media(max-width: 640px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+.logo {
+    width: 12rem;
+    height: 3.2rem;
+}
+
+.description {
+    font-weight: 500;
+    text-align: center;
+    max-width: 90rem;
+}
+
+.glass-bg {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: var(--border-radius-x5);
+    padding: 1.2rem;
+}
+
+
+.form__input {
+    font-family: 'Kinetika';
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--default-dark-teal);
+    background: var(--white);
+    font-weight: 400;
+    padding: 1.6rem;
+    border: 1px solid var(--grey-teal);
+    width: 100%;
+    outline: none;
+    margin-bottom: 0;
+    border-radius: var(--border-radius-x2);
+}
+
+.form__input::placeholder {
+    color: var(--grey-teal);
+}

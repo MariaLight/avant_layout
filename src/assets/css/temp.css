@@ -1,0 +1,293 @@
+
+
+.form__subtitle {
+    color: #2B2B2B;
+    font-family: 'Roboto';
+    text-align: center;
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2B2B2B80;
+}
+
+
+.form__subtitle,
+.form__text {
+    max-width: 50.3rem;
+    margin: 0 auto;
+}
+
+.form__subtitle {
+    margin-bottom: 2rem;
+}
+
+.form__text {
+    margin-bottom: 4rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #818181;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+}
+
+.form__label {
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+
+.form__submit p {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    text-wrap: balance;
+    margin-top: 1rem;
+}
+
+.animated {
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox>span::before {
+    content: '';
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #000;
+    border-radius: .2rem;
+    margin-right: .6rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70% 70%;
+    transition: all .2s linear;
+    margin-bottom: 0.2rem;
+}
+
+@media (max-width: 640px) {
+    .custom-checkbox>span::before {
+        width: 1rem;
+        height: 1rem;
+        margin-right: .4rem;
+    }
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: var(--black);
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox>input:focus+span::before {
+    border-color: var(--black);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: var(--black);
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+    border-color: var(--black);
+    background-color: var(--black);
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6741 5.89355L8.01619 15.7883L4.30566 12.0778' stroke='white' stroke-width='1.94595' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+}
+
+.form__btn {
+    margin-top: 2.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 2rem 5.7rem;
+    width: fit-content;
+    letter-spacing: normal;
+}
+
+.acceptance__text {
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 200;
+}
+
+@media (max-width: 640px) {
+    .form__subtitle {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+
+    .form__subtitle,
+    .form__text {
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+
+    .form__subtitle {
+        margin-bottom: 1rem;
+    }
+
+    .form__text {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .form__label {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .form__input {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        padding: 1.1rem 1.7rem;
+        margin-bottom: 2rem;
+        border-radius: 1.2rem;
+        margin-top: .5rem;
+    }
+
+    .form__submit p {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .custom-checkbox>span::before {
+        width: 1rem;
+        height: 1rem;
+        margin-right: .4rem;
+    }
+
+    .form__btn {
+        margin-top: 1.7rem;
+        font-size: 1.2rem;
+        border-radius: .5rem;
+        padding: 1rem 3rem;
+    }
+
+    .acceptance__text {
+        font-size: 1rem;
+        line-height: 1;
+        font-weight: 200;
+    }
+}
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    bottom: initial;
+    background: #000000B2;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .2s, visibility .2s;
+    transition: opacity .2s, visibility .2s;
+    overflow-y: scroll
+}
+
+.modal--active {
+    opacity: 1;
+    visibility: visible
+}
+
+.modal__inner {
+    position: relative;
+    max-width: 72rem;
+    width: fit-content
+}
+
+.modal__content {
+    border-radius: 1rem;
+    padding: 6.1rem 6.6rem 6.6rem;
+    box-shadow: 0px 4px 20px 0px #00000040;
+    background-color: #F7FAFC;
+    width: 100%;
+}
+
+.modal__content::-webkit-scrollbar {
+    width: 0;
+    height: 0
+}
+
+.modal__close {
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    top: 1rem;
+    -webkit-transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    right: 1rem;
+    color: #2b2b2b;
+}
+
+.modal__close svg {
+    width: 2.4rem;
+    height: 2.4rem
+}
+
+@media (max-width: 640px) {
+    .modal__inner {
+        max-width: 34.8rem;
+    }
+
+    .modal__content {
+        padding: 3rem;
+    }
+}
