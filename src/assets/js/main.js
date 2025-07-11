@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             searchFormWrapper.querySelector('input').focus();
             headerSocials.classList.add('hide');
         };
-        
+
         searchFormWrapper.querySelector('input').addEventListener('blur', function () {
             setTimeout(function () {
                 searchFormWrapper.classList.remove('active');
@@ -85,29 +85,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const burgerBtn = document.querySelector('#burger');
-    const burgerMenu = document.querySelector('.header__menu');
+    // const burgerBtn = document.querySelector('#burger');
+    // const burgerMenu = document.querySelector('.header__menu');
 
-    burgerBtn.addEventListener('click', function () {
-        burgerMenu.classList.toggle('active');
-        burgerBtn.classList.toggle('active');
-        console.log(burgerBtn, burgerMenu);
-    })
+    // burgerBtn.addEventListener('click', function () {
+    //     burgerMenu.classList.toggle('active');
+    //     burgerBtn.classList.toggle('active');
+    //     console.log(burgerBtn, burgerMenu);
+    // })
 
-    if (window.matchMedia('(max-width: 640px)')) {
-        const headerMenu = document.querySelector('.header__menu');
-        headerMenu.addEventListener('click', (e) => {
-            const targetElement = e.target;
-            if (targetElement.classList.contains('header__link') && targetElement.parentNode.querySelector('.header__submenu')) {
-                e.preventDefault();
-                targetElement.parentNode.classList.toggle('active');
-                console.log(targetElement);
+    // if (window.matchMedia('(max-width: 640px)')) {
+    //     const headerMenu = document.querySelector('.header__menu');
+    //     headerMenu.addEventListener('click', (e) => {
+    //         const targetElement = e.target;
+    //         if (targetElement.classList.contains('header__link') && targetElement.parentNode.querySelector('.header__submenu')) {
+    //             e.preventDefault();
+    //             targetElement.parentNode.classList.toggle('active');
+    //             console.log(targetElement);
 
-            }
+    //         }
 
-        })
-    }
+    //     })
+    // }
 
+   Fancybox.bind('[data-fancybox]', {});
 
 })
 

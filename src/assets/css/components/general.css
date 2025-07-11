@@ -439,3 +439,60 @@ h4.title {
 .custom-checkbox>input:disabled+span::before {
     background-color: #e9ecef;
 }
+
+.licence__swiper {
+    overflow: visible;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--white);
+    border-radius: 50%;
+    color: var(--default);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: '';
+    width: 1.8rem;
+    height: 1.8rem;
+    background-image: url(../../img/base/swiper-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0);
+    opacity: 0.5;
+    transition: all 0.2s linear;
+}
+
+@media (hover:hover) {
+
+    .swiper-button-next:hover::after,
+    .swiper-button-prev:hover::after {
+        opacity: 1;
+        filter: brightness(1);
+
+    }
+}
+
+.swiper-button-next::after {
+    transform: rotate(180deg);
+}
+
+.swiper-button-next {
+    right: -2rem;
+}
+
+.swiper-button-prev {
+    left: -2rem;
+}
+
+.swiper-slide {
+    transition: opacity 0.2s linear;
+}
+
+.swiper-slide:not(.swiper-slide-visible) {
+    opacity: 0.25;
+}
