@@ -290,3 +290,178 @@
     max-width: 46rem;
     text-wrap: balance;
 }
+
+/* Feedback  */
+.feedback__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.swiper__btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feedback__swiper {
+    overflow: visible;
+}
+
+.feedback__card {
+    background-color: var(--white);
+    border-radius: .8rem;
+    padding: 2rem;
+
+}
+
+.feedback__card__header {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feedback__card__header__img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+}
+
+.feedback__card__header__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feedback__card__header__content {
+    max-width: 15rem;
+}
+
+.feedback__card__header_name {
+    font-family: 'FuturaPT Demi';
+    font-size: 1.6rem;
+    margin-bottom: .3rem;
+}
+
+.feedback__card__header_service {
+    font-size: 1.4rem;
+}
+
+.feedback__card__header__rating {
+    display: flex;
+    align-items: flex-end;
+    gap: .2rem;
+    margin-top: .5rem;
+}
+
+.feedback__card__header__rating__stars {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.feedback__card__header__rating__stars svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    color: var(--yellow);
+    filter: brightness(1);
+    flex-shrink: 0;
+}
+
+.feedback__card__header__rating__stars svg.inactive {
+    filter: brightness(0);
+    opacity: 0.2;
+}
+
+.feedback__card__header__rating__text {
+    font-size: 1.4rem;
+    color: var(--yellow);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: .9;
+}
+
+.swiper__btns .swiper-button-next,
+.swiper__btns .swiper-button-prev {
+    position: static;
+}
+
+/* Articles  */
+.articles__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.article__card {
+    border-radius: .8rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    position: relative;
+    min-height: 36rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.article__card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    z-index: 1;
+    background-color: rgba(72, 81, 85, 0.8);
+    border-radius: .8rem;
+}
+
+.article__card__link {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    z-index: 3;
+}
+
+.article__card__content {
+    position: relative;
+    z-index: 2;
+}
+
+.article__card__date {
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: 'FuturaPT';
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    opacity: 0.5;
+}
+
+.article__card__title {
+    font-size: 2.4rem;
+    font-family: 'FuturaPT Book';
+    font-weight: normal;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.article__card__span {
+    font-family: 'FuturaPT';
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #36C0FE;
+    text-decoration: underline;
+    transition: color 0.2s linear;
+}
+
+@media (hover:hover) {
+    .article__card__link:hover~.article__card__content .article__card__span {
+        color: var(--white);
+    }
+}

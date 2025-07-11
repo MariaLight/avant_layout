@@ -11,26 +11,6 @@ const licenceSwiper = new Swiper('.licence__swiper', {
         nextEl: '.licence__swiper .swiper-button-next',
         prevEl: '.licence__swiper .swiper-button-prev',
     },
-    // on: {
-    //     slideChange: function () {
-    //         this.slides.forEach((slide, idx) => {
-    //             if (!slide.classList.contains('swiper-slide-visible')) {
-    //                 slide.classList.add('my-invisible-slide');
-    //             } else {
-    //                 slide.classList.remove('my-invisible-slide');
-    //             }
-    //         });
-    //     },
-    //     init: function () {
-    //         this.slides.forEach((slide, idx) => {
-    //             if (!slide.classList.contains('swiper-slide-visible')) {
-    //                 slide.classList.add('my-invisible-slide');
-    //             } else {
-    //                 slide.classList.remove('my-invisible-slide');
-    //             }
-    //         });
-    //     }
-    // }
     on: {
         slideChange: updateVisibleSlides,
         init: updateVisibleSlides
@@ -46,3 +26,17 @@ function updateVisibleSlides() {
         if (this.slides[i]) this.slides[i].classList.add('swiper-slide-visible');
     }
 }
+
+const feedbackSwiper = new Swiper('.feedback__swiper', {
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 40,
+    navigation: {
+        nextEl: '.swiper__btns .swiper-button-next',
+        prevEl: '.swiper__btns .swiper-button-prev',
+    },
+    on: {
+        slideChange: updateVisibleSlides,
+        init: updateVisibleSlides
+    }
+});
