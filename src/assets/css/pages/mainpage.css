@@ -465,3 +465,60 @@
         color: var(--white);
     }
 }
+
+/* Text block  */
+.text-block__title {
+    margin-bottom: 2rem;
+}
+
+.text-block__content {
+    font-size: 2rem;
+    transition: all 0.3s linear;
+
+}
+
+.text-block__content p:not(:last-child),
+.text-block__content ul:not(:last-child) {
+    margin-bottom: 2rem;
+}
+.text-block__content li:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.text-block__button {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--blue);
+    font-family: 'FuturaPT Book';
+    font-weight: 400;
+    transition: all 0.2s linear;
+}
+
+@media (hover:hover) {
+    .text-block__button:hover {
+        color: var(--default);
+    }
+}
+@media (hover:none) {
+    .text-block__button:active {
+        color: var(--default);
+    }
+}
+
+.text-block__button svg {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.text-block__button.active svg {
+    transform: rotate(-90deg);
+}
+.text-block__content.hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
