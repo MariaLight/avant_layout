@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'FuturaPT Book';
+    src: url('FuturaPT-Book.eot');
+    src: local('FuturaPT Book'), local('FuturaPT-Book'),
+        url('FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+        url('FuturaPT-Book.woff2') format('woff2'),
+        url('FuturaPT-Book.woff') format('woff'),
+        url('FuturaPT-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuturaPT Demi';
+    src: url('FuturaPT-Demi.eot');
+    src: local('FuturaPT Demi'), local('FuturaPT-Demi'),
+        url('FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+        url('FuturaPT-Demi.woff2') format('woff2'),
+        url('FuturaPT-Demi.woff') format('woff'),
+        url('FuturaPT-Demi.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('FuturaPT-Medium.eot');
+    src: local('FuturaPT Medium'), local('FuturaPT-Medium'),
+        url('FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+        url('FuturaPT-Medium.woff2') format('woff2'),
+        url('FuturaPT-Medium.woff') format('woff'),
+        url('FuturaPT-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('FuturaPT-Light.eot');
+    src: local('FuturaPT Light'), local('FuturaPT-Light'),
+        url('FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+        url('FuturaPT-Light.woff2') format('woff2'),
+        url('FuturaPT-Light.woff') format('woff'),
+        url('FuturaPT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('FuturaPT-Heavy.eot');
+    src: local('FuturaPT Heavy'), local('FuturaPT-Heavy'),
+        url('FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('FuturaPT-Heavy.woff2') format('woff2'),
+        url('FuturaPT-Heavy.woff') format('woff'),
+        url('FuturaPT-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Regular.eot');
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Regular.woff2') format('woff2'),
+        url('Montserrat-Regular.woff') format('woff'),
+        url('Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Medium.eot');
+    src: local('Montserrat Medium'), local('Montserrat-Medium'),
+        url('Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Medium.woff2') format('woff2'),
+        url('Montserrat-Medium.woff') format('woff'),
+        url('Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Bold.eot');
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url('Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Bold.woff2') format('woff2'),
+        url('Montserrat-Bold.woff') format('woff'),
+        url('Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-SemiBold.eot');
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+        url('Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-SemiBold.woff2') format('woff2'),
+        url('Montserrat-SemiBold.woff') format('woff'),
+        url('Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('playfairdisplay-semibold.eot');
+    src: local('Playfair Display Semibold'), local('playfairdisplay-semibold'),
+        url('playfairdisplay-semibold.eot?#iefix') format('embedded-opentype'),
+        url('playfairdisplay-semibold.woff2') format('woff2'),
+        url('playfairdisplay-semibold.woff') format('woff'),
+        url('playfairdisplay-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
