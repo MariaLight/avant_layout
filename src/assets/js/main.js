@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    try {
+    // try {
         const btns = document.querySelectorAll('[data-modal]');
         const body = document.querySelector('body');
         const btnClose = document.querySelectorAll('[data-modal-close]');
@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
 
-    } catch (error) {
-    }
+    // } catch (error) {
+    // }
 
     const searchBtn = document.querySelector('.header__search-btn');
     const searchFormWrapper = document.querySelector('.header__search-form');

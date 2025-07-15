@@ -214,7 +214,7 @@
 }
 
 .white-btn {
-    background-color: var(--grey);
+    background-color: transparent;
     color: var(--default);
 
 }

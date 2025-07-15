@@ -537,3 +537,117 @@ a.breadcrumbs__item::after {
         color: var(--blue);
     }
 }
+
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    bottom: initial;
+    background: #000000B2;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .2s, visibility .2s;
+    transition: opacity .2s, visibility .2s;
+    overflow-y: scroll
+}
+
+.modal--active {
+    opacity: 1;
+    visibility: visible
+}
+
+.modal__inner {
+    position: relative;
+    max-width: 72rem;
+    width: fit-content
+}
+
+.modal__content {
+    border-radius: 1rem;
+    padding: 4rem;
+    box-shadow: 0px 4px 20px 0px #00000040;
+    background-color: var(--grey);
+    width: 100%;
+}
+
+.modal__content::-webkit-scrollbar {
+    width: 0;
+    height: 0
+}
+
+.modal__close {
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    top: 1.5rem;
+    -webkit-transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    right: 1.5rem;
+    color: #2b2b2b;
+}
+
+.modal__close svg {
+    width: 2.4rem;
+    height: 2.4rem
+}
+
+@media (max-width: 640px) {
+    .modal__inner {
+        max-width: 34.8rem;
+    }
+
+    .modal__content {
+        padding: 3rem;
+    }
+}
+
+.modal__tarif__title {
+    margin-bottom: 2.7rem;
+}
+
+.modal__tarif__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.modal__tarif__item__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.8rem;
+    font-family: 'FuturaPT';
+    font-weight: 500;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.modal__tarif__item__title img {
+    width: 2rem;
+    height: 2rem;
+}
