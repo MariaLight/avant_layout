@@ -1,22 +1,22 @@
-const licenceSwiper = new Swiper('.licence__swiper', {
-    loop: false,
-    slidesPerView: 4,
-    spaceBetween: 40,
-    // breakpoints: {
-    //     768: {
-    //         slidesPerView: 2,
-    //     },
-    // },
-    navigation: {
-        nextEl: '.licence__swiper .swiper-button-next',
-        prevEl: '.licence__swiper .swiper-button-prev',
-    },
-    on: {
-        slideChange: updateVisibleSlides,
-        init: updateVisibleSlides
-    }
+function initCommonSwiper(selector) {
+    return new Swiper(selector, {
+        loop: false,
+        slidesPerView: 4,
+        spaceBetween: 40,
+        navigation: {
+            nextEl: selector + ' .swiper-button-next',
+            prevEl: selector + ' .swiper-button-prev',
+        },
+        on: {
+            slideChange: updateVisibleSlides,
+            init: updateVisibleSlides
+        }
+    });
+}
 
-});
+const licenceSwiper = initCommonSwiper('.licence__swiper');
+const cheersSwiper = initCommonSwiper('.gratitude__swiper');
+const worksSwiper = initCommonSwiper('.works__swiper');
 
 function updateVisibleSlides() {
     this.slides.forEach(slide => {

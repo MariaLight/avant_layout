@@ -301,6 +301,11 @@ h4.title {
     font-size: 1.6rem;
 }
 
+.title strong {
+    font-weight: 500;
+    color: var(--blue);
+}
+
 /* Forms  */
 .cta__form__inner {
     display: flex;
