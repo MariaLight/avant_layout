@@ -89,3 +89,140 @@
     font-size: 1.6rem;
     flex-shrink: 0;
 }
+
+/* Tarif  */
+.tarif__title {
+    margin-bottom: 4.1rem;
+}
+
+.tarif__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.tarif__item {
+    background-color: var(--grey);
+    /* border: 2px solid var(--default); */
+    padding: 3rem;
+    border-radius: .8rem;
+    position: relative;
+}
+
+.tarif__item_optimal {
+    background-color: var(--white);
+    color: var(--default);
+}
+
+.tarif__item_optimal::before {
+    content: '';
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    background: linear-gradient(180deg, #019ADE 0%, #01DE77 100%);
+    position: absolute;
+    inset: 0;
+    margin: -3px -3px;
+    z-index: -1;
+    border-radius: .8rem;
+}
+
+.tarif__item__tag {
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tarif__item__tag img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.tarif__item_econom .tarif__item__tag {
+    background-color: #D9F0FA;
+    color: var(--blue);
+}
+
+.tarif__item__subtitle {
+    font-family: 'Montserrat';
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: .5rem;
+}
+
+.tarif__item__title {
+    font-family: 'Montserrat';
+    margin-bottom: 2rem;
+    font-size: 5.2rem;
+    font-weight: 600;
+    color: var(--default);
+    text-transform: uppercase;
+}
+.tarif__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.tarif__list__item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.6rem;
+
+}
+.tarif__list__item::before {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    background-image: url('../../img/base/tarif-check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.tarif__item_no::before {
+    background-image: url('../../img/base/tarif-nocheck.svg');
+}
+
+.tarif__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.tarif__btn {
+    width: 100%;
+}
+.white-btn {
+    background-color: var(--grey);
+    color: var(--default);
+
+}
+
+
+.white-btn:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.tarif__consult {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.4rem;justify-content: center;
+}
