@@ -500,3 +500,35 @@ h4.title {
 .swiper-slide:not(.swiper-slide-visible) {
     opacity: 0.25;
 }
+
+/* Breadcrumbs */
+.breadcrumbs {
+    display: flex;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+a.breadcrumbs__item {
+    font-size: 1.4rem;
+    color: rgba(72, 81, 85, 0.25);
+    transition: color .3s ease-in-out;
+    margin-right: 2.5rem;
+}
+
+a.breadcrumbs__item::after {
+    content: '/';
+    margin-left: 2.5rem;
+    color: rgba(72, 81, 85, 0.25);
+
+}
+
+.breadcrumbs__item {
+    font-size: 1.4rem;
+
+}
+
+@media (hover:hover) {
+    a.breadcrumbs__item:hover {
+        color: var(--blue);
+    }
+}
