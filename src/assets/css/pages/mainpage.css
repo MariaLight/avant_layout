@@ -481,6 +481,7 @@
 .text-block__content ul:not(:last-child) {
     margin-bottom: 2rem;
 }
+
 .text-block__content li:not(:last-child) {
     margin-bottom: 1.5rem;
 }
@@ -503,6 +504,7 @@
         color: var(--default);
     }
 }
+
 @media (hover:none) {
     .text-block__button:active {
         color: var(--default);
@@ -513,12 +515,59 @@
     width: 1.8rem;
     height: 1.8rem;
 }
+
 .text-block__button.active svg {
     transform: rotate(-90deg);
 }
+
 .text-block__content.hidden {
     opacity: 0;
     visibility: hidden;
     height: 0;
+    overflow: hidden;
+}
+
+.final__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.final__cta {
+    background-color: var(--grey);
+    border-radius: .8rem;
+    padding: 4rem;
+}
+
+.final__cta__title {
+    margin-bottom: 1rem;
+}
+
+.final__cta__text {
+    font-size: 1.8rem;
+}
+
+.final__cta__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.final__cta__form .form__item {
+    width: 100%;
+}
+
+.final__cta__form .cta__form-btn {
+    width: 100%;
+}
+
+.final__cta__form .acceptance__text {
+    justify-content: center;
+    width: 100%;
+}
+
+.final__map {
+    border-radius: .8rem;
     overflow: hidden;
 }
