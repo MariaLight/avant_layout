@@ -17,6 +17,7 @@ function initCommonSwiper(selector) {
 const licenceSwiper = initCommonSwiper('.licence__swiper');
 const cheersSwiper = initCommonSwiper('.gratitude__swiper');
 const worksSwiper = initCommonSwiper('.works__swiper');
+const addonsSwiper = initCommonSwiper('.addons__swiper');
 
 function updateVisibleSlides() {
     this.slides.forEach(slide => {
