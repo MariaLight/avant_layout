@@ -657,3 +657,10 @@ a.breadcrumbs__item::after {
 .page__header .title {
     margin-top: 2rem;
 }
+.page__header .description {
+    margin-top: 2rem;
+}
+.page__header .description p {
+    font-size: 2rem;
+    line-height: 1.6;
+}

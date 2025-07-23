@@ -1,0 +1,140 @@
+.delivery__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-bottom: 4rem;
+
+}
+.delivery__item__inner {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: .8rem;
+    height: auto;
+
+}
+.delivery__item__title {
+    font-size: 2rem !important;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    margin-bottom: 1rem;
+}
+.delivery__item__text {
+    font-size: 1.6rem;
+}
+.delivery__item__list {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-family: 'FuturaPT';
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.delivery__item__list li {
+    display: flex;
+    align-items: start;
+    gap: 1.2rem;
+}
+.delivery__item__list li::before {
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url('../../img/base/simple-check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+.delivery__logos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.delivery__logo {
+    width: 100%;
+    max-width: 10rem;
+    height: auto;
+}
+.delivery__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.delivery__catch__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+.delivery__catch__item {
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: 'FuturaPT Demi';
+    text-wrap: balance;
+}
+.delivery__catch__icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    flex-shrink: 0;
+}
+.delivery__catch__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.delivery__catch__text {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.delivery__catch__text strong {
+    font-size: 2rem;
+    font-family: 'FuturaPT';
+    font-weight: 500;
+}
+.delivery__catch__text strong span {
+    color: var(--blue);
+}
+
+.auto .title {
+    margin-bottom: 3rem;
+}
+.auto__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+.auto__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.auto__item__img {
+    width: 100%;
+    height: 20rem;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+.auto__item__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.auto__item__text {
+    font-size: 2rem;
+    line-height: 1.6;
+    font-family: 'FuturaPT';
+    font-weight: 500;
+}
