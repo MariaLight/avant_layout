@@ -279,3 +279,43 @@ font-family: 'FuturaPT';
         color: var(--blue);
     }
 }
+
+.catalog__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+.catalog__pagination-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.catalog__pagination-btn svg {
+    width: 100%;
+    height: 100%;
+    color: var(--default);
+}
+
+.catalog__pagination-btn_prev {
+    transform: rotate(90deg);
+}
+.catalog__pagination-btn_next {
+    transform: rotate(-90deg);
+}
+.catalog__pagination-pages {
+    display: flex;
+    align-items: center;
+    gap:2rem;
+}
+.catalog__pagination-page {
+    font-size: 1.4rem;
+    color: var(--default);
+    font-family: 'Montserrat';
+    font-weight: 400;
+    opacity: .5;
+}
+.catalog__pagination-page.active {
+   
+    opacity: 1;
+}
