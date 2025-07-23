@@ -800,6 +800,68 @@
             </div>
         </section>
 
+        <section class="section container">
+            <div class="feedback__form">
+                <h3 class="title feedback__form__title">
+                    Оставить отзыв
+                </h3>
+                <div class="feedback__form__description description">
+                    <p>Мы будем благодарны, если вы оставите нам свой отзыв</p>
+                </div>
+                <form action="" class="feedback__form__form">
+                    <div class="form__item form__item_rating">
+                        <label class="form__label" for="feedback-rating">Ваша оценка:</label>
+                        <div class="star-rating">
+                            <input type="range" id="feedback-rating" name="rating" min="1" max="5" step="1" value="5"
+                                style="display:none;">
+                            <div class="stars">
+                                <svg data-value="1" width="32" height="32" viewBox="0 0 24 24" class="star">
+                                    <use xlink:href="assets/img/sprite.svg#star"></use>
+                                </svg>
+                                <svg data-value="2" width="32" height="32" viewBox="0 0 24 24" class="star">
+                                    <use xlink:href="assets/img/sprite.svg#star"></use>
+                                </svg>
+                                <svg data-value="3" width="32" height="32" viewBox="0 0 24 24" class="star">
+                                    <use xlink:href="assets/img/sprite.svg#star"></use>
+                                </svg>
+                                <svg data-value="4" width="32" height="32" viewBox="0 0 24 24" class="star">
+                                    <use xlink:href="assets/img/sprite.svg#star"></use>
+                                </svg>
+                                <svg data-value="5" width="32" height="32" viewBox="0 0 24 24" class="star">
+                                    <use xlink:href="assets/img/sprite.svg#star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__items_grid">
+                        <div class="form__item form__item_name">
+                            <input type="text" class="input-reset form__input" placeholder="Введите имя">
+                        </div>
+                        <div class="form__item form__item_tel">
+                            <input type="tel" class="input-reset form__input" placeholder="+7 (___) ___-__-__">
+                        </div>
+                    </div>
+                    <div class="form__item form__item_text">
+                        <textarea class="input-reset form__input" placeholder="Ваше сообщение..."></textarea>
+                    </div>
+                    <div class="form__items_grid">
+
+
+                        <button class="feedback__form-btn main-btn btn-reset">
+                            Отправить
+                        </button>
+                        <div class="form__item form__item_acceptance">
+                            <label class="acceptance custom-checkbox">
+                                <input type="checkbox" name="acceptance">
+                                <span class="acceptance__text">Даю свое согласие на <a href="">
+                                        обработку персональных данных</a></span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
 
 
         <section class="section container final">

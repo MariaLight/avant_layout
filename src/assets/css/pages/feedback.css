@@ -1,11 +1,87 @@
 .feedback-page {
     margin-bottom: 5rem;
 }
+
 .feedback-page .title {
     margin-bottom: 5rem;
 }
+
 .feedback__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem 4rem;
+}
+
+/* Form  */
+.feedback__form {
+    padding: 4rem 6rem;
+    background-color: #ebebeb;
+    border-radius: .8rem;
+    border: .2rem solid var(--dark-grey);
+
+}
+.feedback__form__title {
+    margin-bottom: 1rem;
+    font-family: 'Montserrat' !important;
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.feedback__form__description {
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+}
+.form__label {
+    font-family: 'FuturaPT';
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--default);
+    display: block;
+    margin-bottom: .5rem;
+}
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.stars {
+    display: flex;
+    gap: 0.35rem;
+    cursor: pointer;
+}
+
+.star-rating .star {
+    transition: fill 0.2s, color 0.2s;
+    fill: #FFD600;
+    color: #FFD600;
+    width: 2rem;
+    height: 2rem;
+}
+
+.star-rating .star.inactive {
+    fill: #E0E0E0;
+    color: #E0E0E0;
+}
+
+.feedback__form .form__item:not(:last-child) {
+    margin-bottom: 2rem;
+} 
+.form__items_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.form__item_acceptance {
+    margin-top: 1.5rem;
+}
+.acceptance__text {
+    font-size: 1.4rem;
+}
+.feedback__form-btn {
+    width: 100%;
+}
+textarea {
+    min-height: 14rem;
 }
