@@ -4,6 +4,7 @@
     align-items: start;
     margin-top: 4rem;
     position: relative;
+    margin-bottom: 5rem;
 }
 
 .catalog__filters {
@@ -289,12 +290,13 @@ font-family: 'FuturaPT';
 
 .catalog__pagination-btn {
     width: 2.4rem;
+    color: var(--default);
+
     height: 2.4rem;
 }
 .catalog__pagination-btn svg {
     width: 100%;
     height: 100%;
-    color: var(--default);
 }
 
 .catalog__pagination-btn_prev {
@@ -302,6 +304,12 @@ font-family: 'FuturaPT';
 }
 .catalog__pagination-btn_next {
     transform: rotate(-90deg);
+}
+
+@media (hover:hover){
+    .catalog__pagination-btn:hover {
+        color: var(--blue);
+    }
 }
 .catalog__pagination-pages {
     display: flex;
@@ -319,3 +327,46 @@ font-family: 'FuturaPT';
    
     opacity: 1;
 }
+@media (hover:hover){
+    .catalog__pagination-page:hover {
+        opacity: 1;
+    }
+}
+
+
+/* Usage  */
+.usage .title {
+    margin-bottom: 2rem;
+}
+.usage .description {
+    margin-bottom: 3rem;
+    text-wrap: balance;
+}
+.usage .cards__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.application .title {
+    margin-bottom: 2rem;
+}
+.application .description {
+    text-wrap: balance;
+}
+
+.application .description ul {
+    margin-bottom: 2rem;
+    padding-left: 0;
+    list-style: none;
+}
+.application .description ul li {
+    margin-bottom: 1rem;
+}
+
+.application .description ul li::before {
+    content: '—';
+    color: var(--blue);
+    margin-right: .5rem;
+}
+
