@@ -654,3 +654,6 @@ a.breadcrumbs__item::after {
     width: 2rem;
     height: 2rem;
 }
+.page__header .title {
+    margin-top: 2rem;
+}
