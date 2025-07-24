@@ -112,6 +112,12 @@ main {
     padding: 5rem 0;
 }
 
+@media (max-width: 960px) {
+    .section {
+        padding: 4rem 0;
+    }
+}
+
 img {
     height: auto;
     max-width: 100%;
@@ -306,12 +312,25 @@ h4.title {
     color: var(--blue);
 }
 
+@media (max-width: 960px) {
+    .title {
+        font-size: 2.8rem;
+    }
+}
+
 /* Forms  */
 .cta__form__inner {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 960px) {
+    .cta__form__inner {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 }
 
 .form__item {
@@ -337,6 +356,7 @@ h4.title {
 .form__item_tel::before {
     background-image: url(../../img/base/form-tel.svg);
 }
+
 .form__item_text::before {
     background-image: url(../../img/base/form-message.svg);
 }
@@ -500,7 +520,15 @@ h4.title {
 .swiper-button-prev {
     left: -2rem;
 }
+@media (max-width: 960px) {
+    .swiper-button-next {
+        right: 1rem;
+    }
 
+    .swiper-button-prev {
+        left: 1rem;
+    }
+}
 .swiper-slide {
     transition: opacity 0.2s linear;
 }
@@ -654,12 +682,15 @@ a.breadcrumbs__item::after {
     width: 2rem;
     height: 2rem;
 }
+
 .page__header .title {
     margin-top: 2rem;
 }
+
 .page__header .description {
     margin-top: 2rem;
 }
+
 .page__header .description p {
     font-size: 2rem;
     line-height: 1.6;

@@ -83,3 +83,13 @@ details[open] summary~* {
 
     }
 }
+
+
+@media (max-width: 960px) {
+    
+    
+    summary {
+        font-size: 1.8rem;
+    }
+    
+}

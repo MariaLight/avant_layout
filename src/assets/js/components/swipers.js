@@ -10,6 +10,14 @@ function initCommonSwiper(selector) {
         on: {
             slideChange: updateVisibleSlides,
             init: updateVisibleSlides
+        },
+        breakpoints: {
+            500: {
+                slidesPerView: 2.5,
+            },
+            960: {
+                slidesPerView: 4,
+            },
         }
     });
 }
@@ -39,5 +47,14 @@ const feedbackSwiper = new Swiper('.feedback__swiper', {
     on: {
         slideChange: updateVisibleSlides,
         init: updateVisibleSlides
+    },
+    breakpoints: {
+        500: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        960: {
+            slidesPerView: 3,
+        },
     }
 });
