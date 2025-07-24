@@ -44,7 +44,7 @@
 .about-banner__target::after {
     content: '';
     width: 60rem;
-    height: 22rem;
+    height: 100%;
     display: block;
     position: absolute;
     top: 0;
@@ -85,6 +85,47 @@
     line-height: 1.4;
 }
 
+@media (max-width: 960px) {
+    .about-banner {
+        padding: 0 0 4rem 0;
+    }
+
+    .about-banner__title {
+        margin-bottom: 2rem;
+    }
+
+
+    .about-banner__inner {
+        align-items: center;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .about-banner__img {
+        width: 100%;
+    }
+
+
+    .about-banner__target {
+        margin-top: 2rem;
+        max-width: 45rem;
+    }
+
+    .about-banner__target::after {
+        content: '';
+        width: 45rem;
+        height: 100%;
+        top: 0;
+        right: auto;
+        left: -1rem;
+    }
+
+    .about-banner__target__text {
+        font-size: 1.6rem;
+        text-wrap: balance;
+    }
+}
+
 .values__title {
     margin-bottom: 2rem;
 }
@@ -107,6 +148,19 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     margin-bottom: 1.2rem;
+}
+
+@media (max-width: 960px) {
+
+    .values__title {
+        margin-bottom: 3rem;
+    }
+
+    .values__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
 }
 
 /* Strategy  */
@@ -156,13 +210,29 @@
     object-position: center;
 }
 
+@media (max-width: 960px) {
+
+
+
+    .strategy__title {
+        font-size: 2rem !important;
+    }
+
+    .strategy__text {
+        margin-bottom: 3rem;
+    }
+
+}
+
 /* Offer  */
 .offer__title {
     margin-bottom: 2rem;
 }
+
 .offer__list {
     gap: 2rem;
 }
+
 .offer__list .card {
     align-items: center;
 }
@@ -202,4 +272,32 @@
     line-height: 1.4;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+}
+
+@media (max-width: 960px) {
+    .offer__title {
+        margin-bottom: 2rem;
+    }
+
+    .offer__list {
+        gap: 1rem 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .main-offer {
+        padding: 2.6rem 3rem;
+        grid-area: 4 / 1 /5 /2;
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+
+    .main-offer__title {
+        font-size: 2.2rem;
+    }
+
+    .offer__list .desctop-none {
+        display: flex;
+    }
+
 }
