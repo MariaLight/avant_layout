@@ -49,6 +49,26 @@
     object-fit: cover;
 }
 
+@media (max-width: 960px) {
+
+
+    .rent__inner {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .rent__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .rent__img::after {
+        width: 100%;
+        height: 26rem;
+    }
+
+}
+
 /* Cost  */
 
 .cost__title {
@@ -88,6 +108,76 @@
     width: 16rem;
     font-size: 1.6rem;
     flex-shrink: 0;
+}
+
+@media (max-width: 960px) {
+
+    .cost__title {
+        margin-bottom: 3rem;
+    }
+
+
+    .cost__item {
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+        padding: 0;
+    }
+
+    .cost__name {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 2rem 3rem;
+    }
+
+    .cost__rent__column {
+        width: 16rem;
+        font-size: 1.4rem;
+        flex-direction: column;
+        display: flex;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .cost__accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s;
+        padding: 0 0;
+        display: flex;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .cost__item.active .cost__accordion-content {
+        max-height: 500px;
+        opacity: 1;
+        padding: 2rem 3rem;
+
+    }
+
+    .cost__name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        font-weight: 500;
+        user-select: none;
+    }
+
+    .cost__arrow {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+        background: url('../../img/sprite.svg#arrow-down') center/contain no-repeat;
+        transition: transform 0.2s;
+    }
+
+    .cost__item.active .cost__arrow {
+        transform: rotate(180deg);
+    }
 }
 
 /* Tarif  */
@@ -232,7 +322,21 @@
     font-size: 1.4rem;
     justify-content: center;
 }
-
+@media (max-width: 960px) {
+       
+    .tarif__inner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tarif__item__tag {
+        top: -2rem;
+        right: 4rem;
+    }
+    
+    
+    .tarif__btns {
+        padding-right: 3rem;
+    }
+}
 /* Set  */
 .set__title {
     margin-bottom: 3rem;
@@ -245,12 +349,14 @@
     font-family: 'FuturaPT';
     line-height: 1.4;
 }
+
 .set__list {
     display: flex;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
 }
+
 .set__item {
     padding: 1rem 1.5rem;
     border-radius: .8rem;
@@ -269,4 +375,20 @@
 
 .advantages__title {
     margin-bottom: 3rem;
+}
+
+@media (max-width: 960px) {
+    .set__title {
+        margin-bottom: 2rem;
+    }
+    
+    
+    .set__list {
+        gap: 1rem;
+    }
+    
+    .set__item {
+        font-size: 1.6rem;
+    }
+    
 }

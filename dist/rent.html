@@ -182,7 +182,7 @@
             <h2 class="title cost__title">
                 Стоимость аренды опалубки стен
             </h2>
-            <div class="cost__inner">
+            <div class="cost__inner mobile-none">
                 <div class="cost__item cost__header">
                     <div class="cost__name">Аренда опулубки стен, цена</div>
                     <div class="cost__rent__column">Аренда 1 сутки</div>
@@ -215,6 +215,101 @@
                 </div>
 
             </div>
+            <div class="cost__inner desctop-none" id="costAccordion">
+                <div class="cost__item cost__header">
+                    <div class="cost__name">
+                        Аренда опулубки стен, цена
+                    </div>
+                </div>
+                <div class="cost__item">
+                    <div class="cost__name">
+                        Крупнощитовая опалубка стен
+                        <span class="cost__arrow"></span>
+                    </div>
+                    <div class="cost__accordion-content">
+                        <div class="cost__rent__column">
+                            <strong>Аренда 1 сутки:</strong> от 18 руб.
+                        </div>
+                        <div class="cost__rent__column">
+                            <strong>Аренда 15 суток:</strong> от 420 руб.
+                        </div>
+                        <div class="cost__rent__column">
+                            <strong>Аренда 1 месяц:</strong> от 640 руб.
+                        </div>
+                    </div>
+                </div>
+                <div class="cost__item">
+                    <div class="cost__name">
+                        Мелкощитовая опалубка ХСИ
+                        <span class="cost__arrow"></span>
+                    </div>
+                    <div class="cost__accordion-content">
+                        <div class="cost__rent__column">
+                            <strong>Аренда 1 сутки:</strong> от 18 руб.
+                        </div>
+                        <div class="cost__rent__column">
+                            <strong>Аренда 15 суток:</strong> от 420 руб.
+                        </div>
+                        <div class="cost__rent__column">
+                            <strong>Аренда 1 месяц:</strong> от 640 руб.
+                        </div>
+                    </div>
+                </div>
+                <div class="cost__item">
+                    <div class="cost__name">
+                        Крупнощитовая опалубка стен
+                        <span class="cost__arrow"></span>
+                    </div>
+                    <div class="cost__accordion-content">
+                        <div class="cost__rent__column">
+                            <strong>Аренда 1 сутки:</strong> от 18 руб.
+                        </div>
+                        <div class="cost__rent__column">
+                            <strong>Аренда 15 суток:</strong> от 420 руб.
+                        </div>
+                        <div class="cost__rent__column">
+                            <strong>Аренда 1 месяц:</strong> от 640 руб.
+                        </div>
+                    </div>
+                </div>
+                <div class="cost__item">
+                    <div class="cost__name">
+                        Мелкощитовая опалубка ХСИ
+                        <span class="cost__arrow"></span>
+                    </div>
+                    <div class="cost__accordion-content">
+                        <div class="cost__rent__column">
+                            <strong>Аренда 1 сутки:</strong> от 18 руб.
+                        </div>
+                        <div class="cost__rent__column">
+                            <strong>Аренда 15 суток:</strong> от 420 руб.
+                        </div>
+                        <div class="cost__rent__column">
+                            <strong>Аренда 1 месяц:</strong> от 640 руб.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const items = document.querySelectorAll('#costAccordion .cost__item');
+                    items.forEach(item => {
+                        const name = item.querySelector('.cost__name');
+                        if (name) {
+                            name.addEventListener('click', function () {
+                                if (item.classList.contains('active')) {
+                                    item.classList.remove('active');
+                                } else {
+                                    // Если нужен одиночный аккордеон, раскомментируйте следующую строку:
+                                    // items.forEach(i => i.classList.remove('active'));
+                                    item.classList.add('active');
+                                }
+                            });
+                        }
+                    });
+                });
+            </script>
         </section>
 
         <section class="section container tarif">
@@ -347,7 +442,7 @@
             </div>
         </section>
 
-        <section class="section container advantages">
+        <section class="section container">
             <h2 class="title advantages__title">Преимущества аренды опалубки по сравнению с покупкой</h2>
             <div class="cards__block">
                 <div class="card">
