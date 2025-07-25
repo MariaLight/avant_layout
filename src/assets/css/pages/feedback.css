@@ -20,6 +20,7 @@
     border: .2rem solid var(--dark-grey);
 
 }
+
 .feedback__form__title {
     margin-bottom: 1rem;
     font-family: 'Montserrat' !important;
@@ -27,10 +28,12 @@
     font-weight: 500;
     line-height: 1.2;
 }
+
 .feedback__form__description {
     margin-bottom: 2.5rem;
     font-size: 1.8rem;
 }
+
 .form__label {
     font-family: 'FuturaPT';
     font-size: 1.4rem;
@@ -40,6 +43,7 @@
     display: block;
     margin-bottom: .5rem;
 }
+
 .star-rating {
     display: flex;
     align-items: center;
@@ -67,21 +71,65 @@
 
 .feedback__form .form__item:not(:last-child) {
     margin-bottom: 2rem;
-} 
+}
+
 .form__items_grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
+
 .form__item_acceptance {
     margin-top: 1.5rem;
 }
+
 .acceptance__text {
     font-size: 1.4rem;
 }
+
 .feedback__form-btn {
     width: 100%;
 }
+
 textarea {
     min-height: 14rem;
+}
+
+@media (max-width: 960px) {
+    .feedback-page {
+        margin-bottom: 4rem;
+    }
+
+    .feedback-page .title {
+        margin-bottom: 3rem;
+    }
+
+    .feedback__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Form  */
+
+
+    .feedback__form .form__item:not(:last-child), .form__items_grid {
+        margin-bottom: 1rem;
+    }
+
+    .form__items_grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .form__item_acceptance {
+        margin-top: 1rem;
+    }
+
+    .acceptance__text {
+        font-size: 1.2rem;
+    }
+.form__item_acceptance {
+    margin-left: auto;
+    margin-right: auto;
+}
 }
