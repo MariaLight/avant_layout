@@ -30,9 +30,28 @@
 
 .steps__item::before {
     content: "0" counter(step)  ".";
-    color: var(--blue);
+    color: #36C0FE;
     font-size: 5.6rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 1;
 } 
+
+@media (max-width: 960px) {
+    .conditions__description {
+        margin-bottom: 4rem;
+    }
+
+    
+    .steps__title {
+        margin-bottom: 4rem;
+    }
+    .steps__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .steps__item {
+        align-items: center;
+    
+    }
+    
+}
