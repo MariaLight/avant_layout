@@ -12,7 +12,10 @@
     width: 66rem;
     height: auto;
     flex-shrink: 0;
+    overflow: hidden;
+    border-radius: .8rem;
 }
+
 
 .payment__title {
     margin-bottom: 3rem;
@@ -59,4 +62,22 @@
     .payment__subtext a:hover {
         color: var(--default);
     }
+}
+@media (max-width: 960px) {
+    
+    
+    .payment__inner {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    
+    .payment__img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .payment__title {
+        margin-bottom: 2rem;
+    }
+    
 }
