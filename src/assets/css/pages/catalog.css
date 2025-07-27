@@ -281,6 +281,64 @@ font-family: 'FuturaPT';
     }
 }
 
+@media (max-width: 960px) {
+    .catalog {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .catalog__filters {
+        padding: 0;
+        width: 100%;
+    }
+    
+    .catalog__content {
+        width: 100%;
+    }
+    
+    .catalog__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .catalog__filters__inner {
+        display: none;
+        padding: 3rem 1.7rem 3rem 1.7rem;
+    }
+    .catalog__filters--open .catalog__filters__inner {
+        display: flex;
+    }
+    .catalog__filters-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        background: var(--white);
+        color: var(--default);
+        border: none;
+        border-radius: .0rem;
+        font-size: 1.8rem;
+        font-family: 'Montserrat';
+        padding: 1.9rem 1.5rem;
+        cursor: pointer;
+        transition: background 0.2s ease-in-out;
+    }
+    .catalog__filters-toggle svg {
+        fill: var(--blue);
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    
+}
+@media (min-width: 961px) {
+    .catalog__filters-toggle {
+        display: none !important;
+    }
+    .catalog__filters__inner {
+        display: flex !important;
+    }
+}
 .catalog__pagination {
     display: flex;
     align-items: center;
@@ -332,6 +390,11 @@ font-family: 'FuturaPT';
         opacity: 1;
     }
 }
+@media (max-width: 960px) {
+    .catalog__pagination {
+        margin-top: 2rem;
+    }
+}
 
 
 /* Usage  */
@@ -346,6 +409,11 @@ font-family: 'FuturaPT';
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+}
+@media (max-width: 960px) {
+    .usage .cards__block {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .application .title {
@@ -427,4 +495,10 @@ font-family: 'FuturaPT';
     background-color: var(--blue);
     display: block;
     flex-shrink: 0;
+}
+@media (max-width: 960px) {
+    .advantages {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 }

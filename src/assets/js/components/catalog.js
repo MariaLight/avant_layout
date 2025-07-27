@@ -71,4 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    var filters = document.querySelector('.catalog__filters');
+    var toggleBtn = filters.querySelector('.catalog__filters-toggle');
+    toggleBtn.addEventListener('click', function () {
+        filters.classList.toggle('catalog__filters--open');
+    });
+
 });
