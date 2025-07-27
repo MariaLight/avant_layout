@@ -520,6 +520,7 @@ h4.title {
 .swiper-button-prev {
     left: -2rem;
 }
+
 @media (max-width: 960px) {
     .swiper-button-next {
         right: 1rem;
@@ -529,6 +530,7 @@ h4.title {
         left: 1rem;
     }
 }
+
 .swiper-slide {
     transition: opacity 0.2s linear;
 }
@@ -647,13 +649,25 @@ a.breadcrumbs__item::after {
     height: 2.4rem
 }
 
-@media (max-width: 640px) {
+@media (max-width: 960px) {
     .modal__inner {
-        max-width: 34.8rem;
+        max-width: 30rem;
     }
 
     .modal__content {
-        padding: 3rem;
+        padding: 4rem 3rem;
+    }
+
+    .modal__close {
+        width: 3rem;
+        height: 3rem;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .modal__close svg {
+        width: 2.4rem;
+        height: 2.4rem;
     }
 }
 
@@ -681,6 +695,22 @@ a.breadcrumbs__item::after {
 .modal__tarif__item__title img {
     width: 2rem;
     height: 2rem;
+}
+
+@media (max-width: 960px) {
+    .modal__tarif__title {
+        font-size: 2rem !important;
+        margin-bottom: 2rem;
+    }
+
+    .modal__tarif__item__title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .modal__tarif__item__content {
+        font-size: 1.2rem;
+    }
 }
 
 .page__header .title {
