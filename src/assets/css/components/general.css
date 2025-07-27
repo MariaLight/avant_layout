@@ -725,3 +725,10 @@ a.breadcrumbs__item::after {
     font-size: 2rem;
     line-height: 1.6;
 }
+
+@media (max-width: 960px) {
+    .page__header .description p,
+    .page__header .description {
+        font-size: 1.6rem;
+    }
+}
