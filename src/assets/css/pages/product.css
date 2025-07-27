@@ -277,3 +277,10 @@
 .single__service .tabs__buttons {
     gap: 0;
 }
+
+@media (max-width: 960px) {
+    .single__service__img {
+        height: 24.5rem;
+        margin-bottom: 4rem;
+    }
+}
