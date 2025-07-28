@@ -126,6 +126,21 @@
     }
 }
 
+@media (max-width: 500px) {
+    .about-banner__text {
+        font-size: 1.8rem;
+    }
+    .about-banner__target {
+        padding: 2rem 2rem 2rem 0;
+    }
+    .about-banner__target__title {
+        align-items: start;
+    }
+    .about-banner__target::after {
+        width: 100%;
+    }
+}
+
 .values__title {
     margin-bottom: 2rem;
 }
@@ -161,6 +176,16 @@
         gap: 2rem;
     }
 
+}
+
+@media (max-width: 500px) {
+    .values__list .card {
+        padding: 2rem;
+        flex-direction: column;
+    }
+    .values__list .card__name {
+        font-size: 1.4rem;
+    }
 }
 
 /* Strategy  */
@@ -222,6 +247,16 @@
         margin-bottom: 3rem;
     }
 
+}
+
+@media (max-width: 500px) {
+    .strategy__title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .strategy__text {
+        font-size: 1.6rem;
+    }
 }
 
 /* Offer  */
@@ -300,4 +335,21 @@
         display: flex;
     }
 
+}
+
+@media (max-width: 500px) {
+    .offer__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    .main-offer {
+        padding: 2rem;
+        grid-area: auto;
+        grid-row: auto;
+        grid-column: auto;
+        gap: 2rem;
+    }
+    .main-offer__title  {
+        font-size: 1.8rem;
+    }
 }
