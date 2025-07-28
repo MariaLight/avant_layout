@@ -415,6 +415,10 @@
     .tarif__list__item  {
         text-wrap: balance;
     }
+    .tarif__item__tag {
+        right: 1.6rem;
+        top: -1.2rem;
+    }
 }
 
 /* Set  */
