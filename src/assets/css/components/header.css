@@ -664,10 +664,16 @@
     .header__menu__mobile .services-dropdown__category-item._open .services-dropdown__category-btn svg {
         transform: rotate(180deg);
     }
-
+@media (hover:hover) {
     .header__menu__mobile .services-dropdown__category-btn:hover {
         color: var(--blue);
     }
+}
+@media (hover:none) {
+    .header__menu__mobile .services-dropdown__category-btn:active {
+        color: var(--blue);
+    }
+}
 
     .header__menu__mobile .services-dropdown__subcategories-group {
         display: none;
@@ -731,6 +737,14 @@
         padding: 0;
     }
 
+    .header__menu__mobile .services-dropdown__column-group-btn:hover {
+        color: var(--blue);
+    }
+
+    .header__menu__mobile .services-dropdown__column-group-btn:focus {
+        outline: none;
+    }
+
     .header__menu__mobile .services-dropdown__column-group-btn svg {
         width: 1.2rem;
         height: 1.2rem;
@@ -740,14 +754,6 @@
 
     .header__menu__mobile .services-dropdown__column-group._open .services-dropdown__column-group-btn svg {
         transform: rotate(180deg);
-    }
-
-    .header__menu__mobile .services-dropdown__column-group-btn:hover {
-        color: var(--blue);
-    }
-
-    .header__menu__mobile .services-dropdown__column-group-btn:focus {
-        outline: none;
     }
 
     /* Стили для содержимого групп */
@@ -804,10 +810,6 @@
         transition: transform 0.2s;
     }
 
-    .header__menu__mobile .services-dropdown__column-group-title:focus {
-        outline: 2px solid var(--blue);
-        outline-offset: 2px;
-    }
 
     /* Плавная анимация для подгрупп */
     .header__menu__mobile .services-dropdown__subcategories-group {

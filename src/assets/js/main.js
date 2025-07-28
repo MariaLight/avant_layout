@@ -165,6 +165,35 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.querySelector('.header__menu__mobile');
     const mobileMenuClose = document.querySelector('.header__menu__mobile__close');
 
+    // Функция для закрытия всех dropdown'ов в мобильном меню
+    function closeAllMobileDropdowns() {
+        if (mobileMenu) {
+            const allDropdowns = mobileMenu.querySelectorAll('.header__menu__item--dropdown');
+            
+            allDropdowns.forEach((dropdown, index) => {
+                dropdown.classList.remove('_open');
+                
+                // Закрываем все category-item
+                const allCategoryItems = dropdown.querySelectorAll('.services-dropdown__category-item');
+                allCategoryItems.forEach(categoryItem => {
+                    categoryItem.classList.remove('_open');
+                });
+                
+                // Закрываем все subcategories-group
+                const allSubcategories = dropdown.querySelectorAll('.services-dropdown__subcategories-group');
+                allSubcategories.forEach(subcategory => {
+                    subcategory.classList.remove('active');
+                });
+                
+                // Закрываем все column-group-links
+                const allColumnGroups = dropdown.querySelectorAll('.services-dropdown__column-group');
+                allColumnGroups.forEach(group => {
+                    group.classList.remove('_open');
+                });
+            });
+        }
+    }
+
     if (burgerBtn && mobileMenu) {
         burgerBtn.addEventListener('click', function () {
             mobileMenu.style.display = 'flex';
@@ -174,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (mobileMenuClose) {
         mobileMenuClose.addEventListener('click', function () {
+            closeAllMobileDropdowns();
             mobileMenu.style.display = 'none';
             document.body.style.overflow = '';
         });
@@ -183,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (mobileMenu) {
         mobileMenu.addEventListener('click', function (e) {
             if (e.target === mobileMenu) {
+                closeAllMobileDropdowns();
                 mobileMenu.style.display = 'none';
                 document.body.style.overflow = '';
             }
@@ -191,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Мобильный services-dropdown
     const mobileDropdown = document.querySelector('.header__menu__mobile .header__menu__item--dropdown');
+    
     if (mobileDropdown) {
         const mobileCategoryItems = mobileDropdown.querySelectorAll('.services-dropdown__category-item');
         const mobileLink = mobileDropdown.querySelector('.header__menu__link');
@@ -198,16 +230,47 @@ document.addEventListener('DOMContentLoaded', function () {
         // Обработка клика по ссылке "Услуги" в мобильном меню
         mobileLink.addEventListener('click', function (e) {
             e.preventDefault();
+            
+            // Если закрываем dropdown, то закрываем все вложенные элементы
+            if (mobileDropdown.classList.contains('_open')) {
+                
+                // Закрываем все category-item
+                const allCategoryItems = mobileDropdown.querySelectorAll('.services-dropdown__category-item');
+                allCategoryItems.forEach(categoryItem => {
+                    categoryItem.classList.remove('_open');
+                });
+                
+                // Закрываем все subcategories-group
+                const allSubcategories = mobileDropdown.querySelectorAll('.services-dropdown__subcategories-group');
+                allSubcategories.forEach(subcategory => {
+                    subcategory.classList.remove('active');
+                });
+                
+                // Закрываем все column-group-links
+                const allColumnGroups = mobileDropdown.querySelectorAll('.services-dropdown__column-group');
+                allColumnGroups.forEach(group => {
+                    group.classList.remove('_open');
+                });
+            }
+            
             mobileDropdown.classList.toggle('_open');
         });
 
         // Обработка клика по кнопкам категорий в мобильном меню
-        mobileCategoryItems.forEach(item => {
+        mobileCategoryItems.forEach((item, index) => {
             const btn = item.querySelector('.services-dropdown__category-btn');
             const subcategories = item.querySelector('.services-dropdown__subcategories-group');
             
             btn.addEventListener('click', function (e) {
                 e.preventDefault();
+                
+                // Если закрываем категорию, то закрываем все вложенные группы
+                if (item.classList.contains('_open')) {
+                    const allColumnGroups = item.querySelectorAll('.services-dropdown__column-group');
+                    allColumnGroups.forEach(group => {
+                        group.classList.remove('_open');
+                    });
+                }
                 
                 // Закрываем все остальные категории
                 mobileCategoryItems.forEach(otherItem => {
@@ -223,7 +286,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Обработка клика по кнопкам-триггерам заголовков групп
         const mobileColumnGroups = mobileDropdown.querySelectorAll('.services-dropdown__column-group');
-        mobileColumnGroups.forEach(group => {
+        
+        mobileColumnGroups.forEach((group, index) => {
             const btn = group.querySelector('.services-dropdown__column-group-btn');
             const links = group.querySelector('.services-dropdown__column-group-links');
             
@@ -236,6 +300,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     group.classList.toggle('_open');
                 });
             }
+            // Если у группы нет вложенных ссылок, то это обычная ссылка
+            // и не нужно добавлять обработчик событий
         });
     }
 
