@@ -206,6 +206,17 @@
     }
 }
 
+@media (max-width: 500px) {
+    .cards__block {
+        gap: 1rem;
+    }
+
+    .card__name,
+    .card__text {
+        font-size: 1.4rem;
+    }
+}
+
 .cta {
     background: var(--grey);
     padding: 4rem 30rem 4rem 4rem;
@@ -271,6 +282,24 @@
         padding: 4rem 6rem 33rem 6rem;
         background-position: bottom left;
         background-size: 50rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .cta {
+        padding: 3rem 3rem 21.6rem 3rem;
+        background-size: 30rem auto;
+    }
+
+    .cta__description {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta__contacts {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -365,6 +394,40 @@
 
 }
 
+@media (max-width: 500px) {
+    .about__target {
+        align-items: start;
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .about__title {
+        font-size: 2rem !important;
+    }
+
+    .about__text {
+        font-size: 1.6rem;
+    }
+
+    .about__target__text {
+        font-size: 1.8rem;
+    }
+
+    .about__target__icon {
+        flex-shrink: 0;
+    }
+
+    .about .main-btn {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .about .cards__block {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+}
+
 
 /* Licences  */
 .licence__title {
@@ -412,6 +475,19 @@
 
     .cta_invert .cta__title {
         text-wrap: balance;
+    }
+}
+
+@media (max-width: 500px) {
+    .cta__title {
+        font-size: 1.8rem !important;
+    }
+
+    .cta_invert {
+        background-position: right bottom;
+        padding: 3rem 2rem 24.1rem;
+        background-size: 28rem;
+
     }
 }
 
@@ -540,6 +616,14 @@
         margin-top: 0;
     }
 
+}
+
+@media (max-width: 500px) {
+    .feedback__header {
+        flex-direction: column;
+        align-items: start;
+        gap: 4rem;
+    }
 }
 
 /* Articles  */
@@ -718,6 +802,17 @@
 
 }
 
+@media (max-width: 500px) {
+    .text-block__content {
+        font-size: 1.4rem;
+    }
+
+    .text-block__button {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+}
+
 
 .final__inner {
     display: grid;
@@ -773,5 +868,14 @@
 
     .final__map iframe {
         height: 36rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .final__cta {
+        padding: 3rem;
+    }
+    .final__cta__form {
+        margin-top: 2rem;
     }
 }

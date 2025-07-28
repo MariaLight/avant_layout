@@ -93,3 +93,13 @@ details[open] summary~* {
     }
     
 }
+
+@media (max-width: 500px) {
+    summary {
+        font-size: 1.6rem;
+    }
+    summary:after {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}

@@ -317,6 +317,21 @@ h4.title {
         font-size: 2.8rem;
     }
 }
+@media (max-width: 500px) {
+    .title {
+        font-size: 2.4rem;
+    }
+    h2.title {
+        font-size: 2rem;
+    
+    }
+    
+    h3.title {
+        font-size: 1.8rem;
+    
+    }
+    
+}
 
 /* Forms  */
 .cta__form__inner {
@@ -330,6 +345,12 @@ h4.title {
     .cta__form__inner {
         flex-wrap: wrap;
         gap: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .cta__form__inner {
+        align-items: stretch;
+        flex-direction: column;
     }
 }
 
@@ -380,6 +401,12 @@ h4.title {
 
 }
 
+@media (max-width: 500px) {
+    .cta__form-btn, .form__item, .form__input {
+        width: 100%;
+    }
+}
+
 .cta__form-btn {
     min-width: 18rem;
 }
@@ -412,7 +439,7 @@ h4.title {
     opacity: 0;
 }
 
-.custom-checkbox>span {
+.custom-checkbox>p {
     display: inline-flex;
     align-items: center;
     user-select: none;
@@ -420,7 +447,7 @@ h4.title {
 
 }
 
-.custom-checkbox>span::before {
+.custom-checkbox>p::before {
     content: '';
     display: inline-block;
     width: 1.6rem;
@@ -438,37 +465,29 @@ h4.title {
     background-color: #fff;
 }
 
-@media (max-width: 640px) {
-    .custom-checkbox>span::before {
-        width: 1rem;
-        height: 1rem;
-        margin-right: .4rem;
-    }
-}
-
 /* стили при наведении курсора на checkbox */
-.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+.custom-checkbox>input:not(:disabled):not(:checked)+p:hover::before {
     border-color: var(--blue);
 }
 
 /* стили для чекбокса, находящегося в фокусе */
-.custom-checkbox>input:focus+span::before {
+.custom-checkbox>input:focus+p::before {
     border-color: var(--blue);
 }
 
 /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-checkbox>input:focus:not(:checked)+span::before {
+.custom-checkbox>input:focus:not(:checked)+p::before {
     border-color: var(--blue);
 }
 
 /* стили для чекбокса, находящегося в состоянии checked */
-.custom-checkbox>input:checked+span::before {
+.custom-checkbox>input:checked+p::before {
 
     background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6741 5.89355L8.01619 15.7883L4.30566 12.0778' stroke='black' stroke-width='1.94595' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
-.custom-checkbox>input:disabled+span::before {
+.custom-checkbox>input:disabled+p::before {
     background-color: #e9ecef;
 }
 

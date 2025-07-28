@@ -12,11 +12,18 @@ function initCommonSwiper(selector) {
             init: updateVisibleSlides
         },
         breakpoints: {
+            300: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+
+            },
             500: {
                 slidesPerView: 2.5,
             },
             960: {
                 slidesPerView: 4,
+                spaceBetween: 40,
+
             },
         }
     });
@@ -49,6 +56,11 @@ const feedbackSwiper = new Swiper('.feedback__swiper', {
         init: updateVisibleSlides
     },
     breakpoints: {
+        300: {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+
+        },
         500: {
             slidesPerView: 2,
             spaceBetween: 20,

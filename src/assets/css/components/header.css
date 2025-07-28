@@ -365,6 +365,17 @@
         width: 3.2rem;
         height: 3.2rem;
     }
+    .header__logo {
+        width: 10rem;
+        height: 3.9rem;
+        flex-shrink: 0;
+    }
+    .burger__btn {
+        flex-shrink: 0;
+    }
+    .header__socials {
+        margin-left: 0;
+    }
 }
 
 .services-dropdown {
