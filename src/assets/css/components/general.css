@@ -381,6 +381,9 @@ h4.title {
 .form__item_text::before {
     background-image: url(../../img/base/form-message.svg);
 }
+.form__item_email::before {
+    background-image: url(../../img/base/form-email.svg);
+}
 
 .form__input {
     font-size: 1.4rem;
@@ -761,6 +764,30 @@ a.breadcrumbs__item::after {
 @media (max-width: 960px) {
     .page__header .description p,
     .page__header .description {
+        font-size: 1.6rem;
+    }
+}
+
+.modal__inner:has(.modal__callback) {
+    max-width: 44rem;
+}
+
+
+.modal__callback .title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.modal__callback .description {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+    .modal__inner:has(.modal__callback) {
+        max-width: 30rem;
+    }
+   
+    .modal__callback .description {
         font-size: 1.6rem;
     }
 }
