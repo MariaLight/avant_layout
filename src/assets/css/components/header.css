@@ -613,7 +613,6 @@
         opacity: 1;
         display: none;
         margin-top: 1rem;
-        border-top: 1px solid rgba(72, 81, 85, 0.1);
         padding-top: 1rem;
     }
 
@@ -651,8 +650,7 @@
         border: none;
         font-size: 1.6rem;
         color: var(--default);
-        font-family: 'FuturaPT';
-        font-weight: 500;
+        font-family: 'FuturaPT Book';
         cursor: pointer;
         transition: all 0.2s;
     }
@@ -698,7 +696,6 @@
     .header__menu__mobile .services-dropdown__link {
         font-size: 1.4rem;
         padding: 0.8rem 0;
-        border-bottom: 1px solid rgba(72, 81, 85, 0.1);
         line-height: 1.4;
         color: var(--default);
         opacity: 0.75;
@@ -724,14 +721,14 @@
         justify-content: flex-start;
         background: none;
         border: none;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: var(--default);
-        font-family: 'FuturaPT';
-        font-weight: 600;
+        font-family: 'FuturaPT Book';
+        font-weight: 400;
         cursor: pointer;
         transition: all 0.2s;
-        margin-bottom: 0.8rem;
         text-decoration: none;
+        padding: 0;
     }
 
     .header__menu__mobile .services-dropdown__column-group-btn svg {
@@ -756,7 +753,7 @@
     /* Стили для содержимого групп */
     .header__menu__mobile .services-dropdown__column-group-links {
         display: none;
-        padding-left: 0.8rem;
+        padding-left:0;
         margin-bottom: 0.8rem;
         flex-direction: column;
         gap: 0.5rem;
@@ -767,14 +764,15 @@
     }
 
     .header__menu__mobile .services-dropdown__column-group-links .services-dropdown__link {
-        padding: 0.5rem 0;
         font-size: 1.4rem;
-        border-bottom: 1px solid rgba(72, 81, 85, 0.1);
         line-height: 1.4;
         color: var(--default);
         opacity: 0.75;
         text-decoration: none;
         transition: all 0.2s;
+        font-family: 'FuturaPT';
+        font-weight: 300;
+        padding: .5rem 0;
     }
 
     .header__menu__mobile .services-dropdown__column-group-links .services-dropdown__link:hover {
@@ -804,17 +802,6 @@
 
     .header__menu__mobile .header__menu__link svg {
         transition: transform 0.2s;
-    }
-
-    /* Дополнительные стили для улучшения UX в мобильной версии */
-    .header__menu__mobile .services-dropdown__category-btn:focus {
-        outline: 2px solid var(--blue);
-        outline-offset: 2px;
-    }
-
-    .header__menu__mobile .services-dropdown__link:focus {
-        outline: 2px solid var(--blue);
-        outline-offset: 2px;
     }
 
     .header__menu__mobile .services-dropdown__column-group-title:focus {
@@ -861,7 +848,6 @@
         opacity: 1 !important;
         display: none;
         margin-top: 1rem;
-        border-top: 1px solid rgba(72, 81, 85, 0.1);
         padding-top: 1rem;
     }
 
