@@ -1181,6 +1181,21 @@
                 </div>
             </aside>
             <div class="catalog__content">
+                <div class="catalog__orderby">
+                    <label for="orderby" class="catalog__orderby-label">Сортировка:</label>
+                    <div class="catalog__orderby-select-wrapper">
+                        <select id="orderby" class="catalog__orderby-select">
+                            <option value="default">По умолчанию</option>
+                            <option value="new">По новизне</option>
+                            <option value="price_asc">По возрастанию цены</option>
+                            <option value="price_desc">По убыванию цены</option>
+                            <option value="name">По названию</option>
+                        </select>
+                        <svg class="catalog__orderby-arrow" width="16" height="16" viewBox="0 0 16 16">
+                            <use xlink:href="assets/img/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </div>
+                </div>
                 <div class="catalog__list">
                     <!-- import "_product-card.html" -->
 <article class="product__card">

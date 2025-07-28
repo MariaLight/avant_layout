@@ -513,3 +513,57 @@ font-family: 'FuturaPT';
     }
     
 }
+
+.catalog__orderby {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+.catalog__orderby-label {
+    font-size: 1.4rem;
+    color: var(--default);
+    font-family: 'FuturaPT';
+    margin-right: .5rem;
+    font-weight: 500;
+}
+.catalog__orderby-select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.catalog__orderby-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 1.4rem;
+    color: var(--default);
+    font-family: 'FuturaPT Book';
+    cursor: pointer;
+    transition: border-color 0.2s;
+    padding: 0 1rem;
+    outline: none;
+}
+.catalog__orderby-arrow {
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    fill: var(--blue);
+    width: 1.4rem;
+    height: 1.4rem;
+
+}
+
+@media (max-width: 600px) {
+    .catalog__orderby-select {
+        min-width: 12rem;
+        font-size: 1rem;
+    }
+    .catalog__orderby-label {
+        font-size: 1rem;
+    }
+}
