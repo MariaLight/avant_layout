@@ -590,6 +590,19 @@ a.breadcrumbs__item::after {
     }
 }
 
+@media (max-width: 500px) {
+    .breadcrumbs {
+        margin-top: 2rem;
+    }
+    .breadcrumbs__item, a.breadcrumbs__item {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+    a.breadcrumbs__item::after {
+        margin-left: 1rem;
+    }
+}
+
 
 .modal {
     position: fixed;
