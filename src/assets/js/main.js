@@ -102,7 +102,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //     })
     // }
+    const dropdown = document.querySelector('.header__menu__item--dropdown');
+    const categories = dropdown.querySelectorAll('.services-dropdown__category');
+    const groups = dropdown.querySelectorAll('.services-dropdown__subcategories-group');
+    categories.forEach(cat => {
+        cat.addEventListener('mouseenter', function () {
+            categories.forEach(c => c.classList.remove('services-dropdown__category--active'));
+            this.classList.add('services-dropdown__category--active');
+            const catName = this.getAttribute('data-category');
+            groups.forEach(g => {
+                if (g.getAttribute('data-category') === catName) {
+                    g.classList.add('active');
+                } else {
+                    g.classList.remove('active');
+                }
+            });
+        });
+        // Для мобильных: клик тоже переключает
+        cat.addEventListener('click', function (e) {
+            e.preventDefault();
+            categories.forEach(c => c.classList.remove('services-dropdown__category--active'));
+            this.classList.add('services-dropdown__category--active');
+            const catName = this.getAttribute('data-category');
+            groups.forEach(g => {
+                if (g.getAttribute('data-category') === catName) {
+                    g.classList.add('active');
+                } else {
+                    g.classList.remove('active');
+                }
+            });
+        });
+    });
 
+    // Открытие/закрытие дропдауна по ховеру и фокусу
+    let closeTimeout = null;
+    dropdown.addEventListener('mouseenter', function () {
+        clearTimeout(closeTimeout);
+        dropdown.classList.add('_open');
+    });
+    dropdown.addEventListener('mouseleave', function () {
+        closeTimeout = setTimeout(() => {
+            dropdown.classList.remove('_open');
+        }, 120);
+    });
+
+    // Для клавиатуры и мобильных: открытие по клику
+    const link = dropdown.querySelector('.header__menu__link');
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        dropdown.classList.toggle('_open');
+    });
+
+    // Клик вне меню закрывает дропдаун
+    document.addEventListener('click', function (e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('_open');
+        }
+    });
     Fancybox.bind('[data-fancybox]', {});
 
 })
