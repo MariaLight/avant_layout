@@ -122,6 +122,25 @@
 
     .hero__card {
         min-width: 20rem;
+        flex: 1 1 0;
+        transition:
+            flex-basis 0.3s cubic-bezier(.4, 0, .2, 1),
+            min-width 0.3s cubic-bezier(.4, 0, .2, 1),
+            filter 0.3s cubic-bezier(.4, 0, .2, 1),
+            box-shadow 0.3s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .hero__card._active {
+        flex-basis: 30rem !important;
+        min-width: 30rem;
+        background-color: var(--default);
+        z-index: 2;
+    }
+
+    .hero__card._shrink {
+        flex-basis: 15rem !important;
+        min-width: 15rem;
+        z-index: 1;
     }
 
     .hero__description {
