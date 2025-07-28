@@ -81,3 +81,25 @@
     }
     
 }
+@media (max-width: 500px) {
+    .payment {
+        padding: 2rem 0;
+    }
+    .payment__list {
+        flex-direction: column;
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+    .payment__text {
+        font-size: 1.6rem;
+    }
+    .payment__item {
+        font-size: 1.6rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.8rem;
+    }
+    .payment__item .payment__text {
+        font-size: 2rem;
+    }
+}
