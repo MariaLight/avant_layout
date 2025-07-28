@@ -159,6 +159,86 @@ document.addEventListener('DOMContentLoaded', function () {
             dropdown.classList.remove('_open');
         }
     });
+
+    // Мобильное меню
+    const burgerBtn = document.querySelector('#burger');
+    const mobileMenu = document.querySelector('.header__menu__mobile');
+    const mobileMenuClose = document.querySelector('.header__menu__mobile__close');
+
+    if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener('click', function () {
+            mobileMenu.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', function () {
+            mobileMenu.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+    }
+
+    // Закрытие мобильного меню по клику вне его
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function (e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // Мобильный services-dropdown
+    const mobileDropdown = document.querySelector('.header__menu__mobile .header__menu__item--dropdown');
+    if (mobileDropdown) {
+        const mobileCategoryItems = mobileDropdown.querySelectorAll('.services-dropdown__category-item');
+        const mobileLink = mobileDropdown.querySelector('.header__menu__link');
+
+        // Обработка клика по ссылке "Услуги" в мобильном меню
+        mobileLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            mobileDropdown.classList.toggle('_open');
+        });
+
+        // Обработка клика по кнопкам категорий в мобильном меню
+        mobileCategoryItems.forEach(item => {
+            const btn = item.querySelector('.services-dropdown__category-btn');
+            const subcategories = item.querySelector('.services-dropdown__subcategories-group');
+            
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Закрываем все остальные категории
+                mobileCategoryItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('_open');
+                    }
+                });
+                
+                // Переключаем текущую категорию
+                item.classList.toggle('_open');
+            });
+        });
+
+        // Обработка клика по кнопкам-триггерам заголовков групп
+        const mobileColumnGroups = mobileDropdown.querySelectorAll('.services-dropdown__column-group');
+        mobileColumnGroups.forEach(group => {
+            const btn = group.querySelector('.services-dropdown__column-group-btn');
+            const links = group.querySelector('.services-dropdown__column-group-links');
+            
+            // Обрабатываем только группы, у которых есть контент
+            if (btn && links && links.children.length > 0) {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    // Переключаем текущую группу
+                    group.classList.toggle('_open');
+                });
+            }
+        });
+    }
+
     Fancybox.bind('[data-fancybox]', {});
 
 })
