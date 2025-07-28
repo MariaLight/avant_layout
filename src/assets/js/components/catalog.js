@@ -6,17 +6,52 @@ document.addEventListener('DOMContentLoaded', function () {
         const catList = catBtn.nextElementSibling;
         catBtn.addEventListener('click', function (e) {
             e.stopPropagation();
+            const isOpening = catList.style.display !== 'block';
+            
             catBtn.classList.toggle('active');
             catList.style.display = catList.style.display === 'block' ? 'none' : 'block';
+            
+            // Если закрываем категорию, закрываем все вложенные элементы
+            if (!isOpening) {
+                // Закрываем все subcategory списки
+                catList.querySelectorAll('.filter__subcategory-list').forEach(function (subList) {
+                    subList.style.display = 'none';
+                });
+                
+                // Закрываем все subsubcategory списки
+                catList.querySelectorAll('.filter__subsubcategory-list').forEach(function (subSubList) {
+                    subSubList.style.display = 'none';
+                });
+                
+                // Убираем активные классы у всех вложенных кнопок
+                catList.querySelectorAll('.filter__subcategory-btn, .filter__subsubcategory-btn').forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+            }
         });
 
         catList.querySelectorAll('.filter__subcategory-btn').forEach(function (btn) {
             btn.addEventListener('click', function (e) {
                 e.stopPropagation();
                 const subList = btn.nextElementSibling;
+                const isOpening = subList.style.display !== 'block';
+                
                 btn.classList.toggle('active');
                 if (subList) {
                     subList.style.display = subList.style.display === 'block' ? 'none' : 'block';
+                }
+                
+                // Если закрываем subcategory, закрываем все вложенные subsubcategory
+                if (!isOpening) {
+                    // Закрываем все subsubcategory списки внутри этого subcategory
+                    subList.querySelectorAll('.filter__subsubcategory-list').forEach(function (subSubList) {
+                        subSubList.style.display = 'none';
+                    });
+                    
+                    // Убираем активные классы у всех вложенных subsubcategory кнопок
+                    subList.querySelectorAll('.filter__subsubcategory-btn').forEach(function (subSubBtn) {
+                        subSubBtn.classList.remove('active');
+                    });
                 }
             });
         });
