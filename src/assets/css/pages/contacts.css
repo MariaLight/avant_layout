@@ -121,6 +121,34 @@
 
 }
 
+@media (max-width: 500px) {
+    .branches__list {
+        gap: 4rem;
+    }
+    .branch__info {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+    .branch__info__item__title {
+        font-size: 1.2rem;
+    }
+    .branch__info__item__value {
+        font-size: 1.6rem;
+    }
+    .branch__info__item__tel {
+        font-size: 2.8rem;
+    }
+    .branch__info__item__email {
+        font-size: 1.6rem;
+    }
+    .branch__info__item__text {
+        font-size: 1.8rem;
+    }
+    .branch__title_none {
+        display: none;
+    }
+}
+
 .requisites__title {
     margin-bottom: 4rem;
 }
@@ -158,9 +186,9 @@
 }
 
 .requisites__item {
-    display: flex;
-    justify-content: space-between;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     font-size: 1.8rem;
     line-height: 1.6;
 
@@ -194,6 +222,14 @@
     
     .requisites__item__title {
         font-size: 1.6rem;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .requisites__inner {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4rem;
     }
     
 }
