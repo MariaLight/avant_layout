@@ -220,10 +220,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Мобильный services-dropdown
-    const mobileDropdown = document.querySelector('.header__menu__mobile .header__menu__item--dropdown');
+    // Мобильные services-dropdown
+    const mobileDropdowns = document.querySelectorAll('.header__menu__mobile .header__menu__item--dropdown');
     
-    if (mobileDropdown) {
+    mobileDropdowns.forEach((mobileDropdown, dropdownIndex) => {
         const mobileCategoryItems = mobileDropdown.querySelectorAll('.services-dropdown__category-item');
         const mobileLink = mobileDropdown.querySelector('.header__menu__link');
 
@@ -250,6 +250,29 @@ document.addEventListener('DOMContentLoaded', function () {
                 const allColumnGroups = mobileDropdown.querySelectorAll('.services-dropdown__column-group');
                 allColumnGroups.forEach(group => {
                     group.classList.remove('_open');
+                });
+            } else {
+                // Если открываем dropdown, то закрываем все остальные dropdown'ы
+                mobileDropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== mobileDropdown) {
+                        otherDropdown.classList.remove('_open');
+                        
+                        // Закрываем все вложенные элементы в других dropdown'ах
+                        const allCategoryItems = otherDropdown.querySelectorAll('.services-dropdown__category-item');
+                        allCategoryItems.forEach(categoryItem => {
+                            categoryItem.classList.remove('_open');
+                        });
+                        
+                        const allSubcategories = otherDropdown.querySelectorAll('.services-dropdown__subcategories-group');
+                        allSubcategories.forEach(subcategory => {
+                            subcategory.classList.remove('active');
+                        });
+                        
+                        const allColumnGroups = otherDropdown.querySelectorAll('.services-dropdown__column-group');
+                        allColumnGroups.forEach(group => {
+                            group.classList.remove('_open');
+                        });
+                    }
                 });
             }
             
@@ -303,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Если у группы нет вложенных ссылок, то это обычная ссылка
             // и не нужно добавлять обработчик событий
         });
-    }
+    });
 
     Fancybox.bind('[data-fancybox]', {});
 
