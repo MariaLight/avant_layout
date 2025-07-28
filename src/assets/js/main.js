@@ -198,6 +198,8 @@ document.addEventListener('DOMContentLoaded', function () {
         burgerBtn.addEventListener('click', function () {
             mobileMenu.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
         });
     }
 
@@ -206,6 +208,8 @@ document.addEventListener('DOMContentLoaded', function () {
             closeAllMobileDropdowns();
             mobileMenu.style.display = 'none';
             document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
         });
     }
 
@@ -216,6 +220,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 closeAllMobileDropdowns();
                 mobileMenu.style.display = 'none';
                 document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
             }
         });
     }
