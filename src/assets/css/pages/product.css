@@ -371,3 +371,9 @@
         margin-bottom: 4rem;
     }
 }
+@media (max-width: 500px) {
+    .single__service__img {
+        height: 15rem;
+        margin-bottom: 4rem;
+    }
+}
