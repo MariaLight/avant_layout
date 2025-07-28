@@ -69,6 +69,25 @@
 
 }
 
+@media (max-width: 500px) {
+    .rent__title {
+        margin-bottom: 1rem;
+    }
+
+    .rent__description {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .rent__btn {
+        width: 100%;
+    }
+
+    .rent__img {
+        margin-top: 0;
+    }
+}
+
 /* Cost  */
 
 .cost__title {
@@ -177,6 +196,27 @@
 
     .cost__item.active .cost__arrow {
         transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .cost__name {
+        padding: 1.8rem 2rem;
+    }
+
+    .cost__item.active .cost__accordion-content {
+        flex-direction: column;
+        padding: 0 2rem 2rem 2rem;
+        gap: 1rem;
+    }
+
+    .cost__rent__column {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 1.4rem;
+        gap: 1.7rem;
     }
 }
 
@@ -322,21 +362,61 @@
     font-size: 1.4rem;
     justify-content: center;
 }
+
 @media (max-width: 960px) {
-       
+
     .tarif__inner {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .tarif__item__tag {
         top: -2rem;
         right: 4rem;
     }
-    
-    
+
+
     .tarif__btns {
         padding-right: 3rem;
     }
 }
+
+@media (max-width: 500px) {
+    .tarif__title {
+        margin-bottom: 3.2rem;
+    }
+
+    .tarif__item {
+        padding: 5rem 3rem 2rem 3rem;
+    }
+
+    .tarif__item__title {
+        font-size: 4.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .tarif__btns {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .tarif__consult {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+    .tarif__item:nth-child(2) .tarif__item__title {
+        font-size: 2.5rem;
+    }
+    .tarif__list__item  {
+        text-wrap: balance;
+    }
+}
+
 /* Set  */
 .set__title {
     margin-bottom: 3rem;
@@ -381,14 +461,34 @@
     .set__title {
         margin-bottom: 2rem;
     }
-    
-    
+
+
     .set__list {
         gap: 1rem;
     }
-    
+
     .set__item {
         font-size: 1.6rem;
     }
-    
+
+}
+
+@media (max-width: 500px) {
+    .set__title {
+        margin-bottom: 1rem;
+    }
+    .set__description {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .set__list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .set__item {
+        width: 100%;
+    }
+
+
 }
