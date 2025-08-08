@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const textBlockButton = document.querySelector('.text-block__button');
     if (textBlockButton) {
         textBlockButton.addEventListener('click', () => {
-            textBlockButton.nextElementSibling.classList.toggle('hidden');
+            textBlockButton.previousElementSibling.classList.toggle('hidden');
             textBlockButton.classList.toggle('active');
         });
     }

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.hero__card');
     const heroDescription = document.querySelector('.hero__description');
+    const heroCardsContainer = document.querySelector('.hero__cards');
     
     // Функция для активации карточки
     const activateCard = (activeCard) => {
@@ -31,10 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             activateCard(card);
         });
         
-        card.addEventListener('mouseleave', () => {
-            deactivateAllCards();
-        });
-        
         // Обработчики для мобильной версии (click)
         card.addEventListener('click', (e) => {
             // Проверяем ширину экрана для мобильной версии
@@ -52,4 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Деактивация всех карточек только при выходе курсора из контейнера,
+    // чтобы не было мерцаний при движении по промежуткам (gap) между карточками
+    if (heroCardsContainer) {
+        heroCardsContainer.addEventListener('mouseleave', () => {
+            deactivateAllCards();
+        });
+    }
 });
