@@ -267,6 +267,17 @@ textarea {
 
 }
 
+.white-btn {
+    background-color: transparent;
+    color: var(--default);
+}
+
+.main-btn svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
 @media (hover:hover) {
     .main-btn:hover {
         background-color: var(--blue);
@@ -422,6 +433,7 @@ h4.title {
 .acceptance__text a {
     color: var(--blue);
     text-decoration: underline;
+    margin-left: .5rem;
 }
 
 @media (hover:hover) {
